@@ -33,7 +33,14 @@ namespace Revisão
                 } 
                 else if(opcaoUsuario == "2")
                 {
-                    //todo: listas todos os alunos
+                    foreach (var student in alunos)
+                    {
+                        if (string.IsNullOrEmpty(student.Name) == false)
+                        {
+                            Console.WriteLine("Nome do aluno: "+student.Name
+                            + "\nNota do aluno: "+student.Nota);
+                        }
+                    }
                 } 
                 else if (opcaoUsuario == "3")
                 {
