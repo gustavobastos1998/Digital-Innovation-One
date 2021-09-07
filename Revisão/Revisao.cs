@@ -7,28 +7,31 @@ namespace Revisão
         static void Main(string[] args)
         {
             char opcaoUsuario;
-            menu();
-            opcaoUsuario = Console.Read();
-            if(opcaoUsuario == '1')
+            do
             {
-                //todo: adicionar alunos
-            } 
-            else if(opcaoUsuario == '2')
-            {
-                //todo: listas todos os alunos
-            } 
-            else if (opcaoUsuario == '3')
-            {
-                //todo: calcular édia geral
-            } 
-            else if(opcaoUsuario == '4')
-            {
-                Console.WriteLine("Programa finalizado.");
-            } 
-            else 
-            {
-                Console.WriteLine("Input inválido.");
-            }
+                menu();
+                opcaoUsuario = Console.Read();
+                if(opcaoUsuario == '1')
+                {
+                    //todo: adicionar alunos
+                } 
+                else if(opcaoUsuario == '2')
+                {
+                    //todo: listas todos os alunos
+                } 
+                else if (opcaoUsuario == '3')
+                {
+                    //todo: calcular édia geral
+                } 
+                else if(opcaoUsuario == '4')
+                {
+                    Console.WriteLine("Programa finalizado.");
+                } 
+                else 
+                {
+                    Console.WriteLine("Input inválido.");
+                }
+            } while(opcaoUsuario != '4');  
         }
         static void menu()
         {
