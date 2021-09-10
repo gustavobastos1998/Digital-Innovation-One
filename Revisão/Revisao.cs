@@ -44,7 +44,39 @@ namespace Revisão
                 } 
                 else if (opcaoUsuario == "3")
                 {
-                    //todo: calcular édia geral
+                    decimal notaTotal = 0;
+                    var numeroAlunos = 0;
+                    for(int i = 0; i< alunos.Length; i = i+1)
+                    {
+                        if(string.IsNullOrEmpty(alunos[i].Name) == false)
+                        {
+                            notaTotal = notaTotal + alunos[i].Nota;
+                            numeroAlunos = numeroAlunos + 1;
+                        }
+                    }
+                    var mediaGeral = notaTotal / numeroAlunos;
+                    ConceitoEnum conceitoGeral;
+                    if(mediaGeral < 2)
+                    {
+                        conceitoGeral = ConceitoEnum.E;
+                    }
+                    else if (mediaGeral < 4)
+                    {
+                        conceitoGeral = ConceitoEnum.D;
+                    }
+                    else if (mediaGeral < 6)
+                    {
+                        conceitoGeral = ConceitoEnum.C;
+                    }
+                    else if (mediaGeral < 8)
+                    {
+                        conceitoGeral = ConceitoEnum.B;
+                    }
+                    else
+                    {
+                        conceitoGeral = ConceitoEnum.A;
+                    }
+                    Console.WriteLine($"Média geral = {mediaGeral}\nConceito = {conceitoGeral}");
                 } 
                 else if(opcaoUsuario == "4")
                 {
